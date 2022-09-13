@@ -27,8 +27,30 @@ class TaskListController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTasks()
+        navigationItem.leftBarButtonItem = editButtonItem
     }
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let taskType = sectionsTypesPosition[indexPath.section]
+        tasks[taskType]?.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let taskTypeFrom = sectionsTypesPosition[sourceIndexPath.section]
+        let taskTypeTo = sectionsTypesPosition[destinationIndexPath.section]
+        guard let movedTask = tasks[taskTypeFrom]?[sourceIndexPath.row] else {
+            return
+        }
+        tasks[taskTypeFrom]!.remove(at: sourceIndexPath.row)
+        tasks[taskTypeTo]!.insert(movedTask, at: destinationIndexPath.row)
+        
+        if taskTypeFrom != taskTypeTo {
+            tasks[taskTypeTo]![destinationIndexPath.row].type = taskTypeTo
+        }
+        tableView.reloadData()
+    }
+    
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let taskType = sectionsTypesPosition[indexPath.section]
         guard let _ = tasks[taskType]?[indexPath.row] else {
