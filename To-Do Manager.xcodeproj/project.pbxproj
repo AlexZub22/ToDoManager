@@ -16,6 +16,10 @@
 		03174ABA28CC8121003A4F92 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03174AB928CC8121003A4F92 /* Task.swift */; };
 		03174ABC28CC8266003A4F92 /* TasksStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03174ABB28CC8266003A4F92 /* TasksStorage.swift */; };
 		0373313128CF34FD009BB1FC /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373313028CF34FD009BB1FC /* TaskCell.swift */; };
+		0373313328D084A4009BB1FC /* TaskEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373313228D084A4009BB1FC /* TaskEditController.swift */; };
+		0373313528D08A49009BB1FC /* TaskTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373313428D08A49009BB1FC /* TaskTypeController.swift */; };
+		0373313828D08C19009BB1FC /* TaskTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373313628D08C19009BB1FC /* TaskTypeCell.swift */; };
+		0373313928D08C19009BB1FC /* TaskTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0373313728D08C19009BB1FC /* TaskTypeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		03174AB928CC8121003A4F92 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		03174ABB28CC8266003A4F92 /* TasksStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksStorage.swift; sourceTree = "<group>"; };
 		0373313028CF34FD009BB1FC /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		0373313228D084A4009BB1FC /* TaskEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditController.swift; sourceTree = "<group>"; };
+		0373313428D08A49009BB1FC /* TaskTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTypeController.swift; sourceTree = "<group>"; };
+		0373313628D08C19009BB1FC /* TaskTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTypeCell.swift; sourceTree = "<group>"; };
+		0373313728D08C19009BB1FC /* TaskTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTypeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,8 @@
 				03174AAB28CC7C1C003A4F92 /* Assets.xcassets */,
 				03174AAD28CC7C1C003A4F92 /* LaunchScreen.storyboard */,
 				03174AB028CC7C1C003A4F92 /* Info.plist */,
+				0373313228D084A4009BB1FC /* TaskEditController.swift */,
+				0373313428D08A49009BB1FC /* TaskTypeController.swift */,
 			);
 			path = "To-Do Manager";
 			sourceTree = "<group>";
@@ -96,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				0373313028CF34FD009BB1FC /* TaskCell.swift */,
+				0373313628D08C19009BB1FC /* TaskTypeCell.swift */,
+				0373313728D08C19009BB1FC /* TaskTypeCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -160,6 +172,7 @@
 			files = (
 				03174AAF28CC7C1C003A4F92 /* LaunchScreen.storyboard in Resources */,
 				03174AAC28CC7C1C003A4F92 /* Assets.xcassets in Resources */,
+				0373313928D08C19009BB1FC /* TaskTypeCell.xib in Resources */,
 				03174AAA28CC7C19003A4F92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,8 +188,11 @@
 				03174AA328CC7C19003A4F92 /* AppDelegate.swift in Sources */,
 				03174ABC28CC8266003A4F92 /* TasksStorage.swift in Sources */,
 				03174AA528CC7C19003A4F92 /* SceneDelegate.swift in Sources */,
+				0373313528D08A49009BB1FC /* TaskTypeController.swift in Sources */,
 				0373313128CF34FD009BB1FC /* TaskCell.swift in Sources */,
 				03174AB728CC7E70003A4F92 /* TaskListController.swift in Sources */,
+				0373313328D084A4009BB1FC /* TaskEditController.swift in Sources */,
+				0373313828D08C19009BB1FC /* TaskTypeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
